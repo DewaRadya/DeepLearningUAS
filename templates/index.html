@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasifikasi Aksara Wianjana Bali</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Klasifikasi Aksara Wianjana Bali</h1>
+        <hr>
+
+        <!-- Form untuk unggah gambar -->
+        <form action="/" method="POST" enctype="multipart/form-data" class="text-center">
+            <div class="form-group">
+                <label for="file">Pilih Gambar Aksara:</label>
+                <input type="file" name="file" class="form-control-file">
+            </div>
+            <button type="submit" class="btn btn-primary">Unggah dan Prediksi</button>
+        </form>
+
+        <!-- Tampilkan hasil prediksi -->
+        {% if label %}
+        <div class="text-center mt-5">
+            <h2>Hasil Prediksi:</h2>
+            <p><strong>Aksara:</strong> {{ label }}</p>
+            <p><strong>Confidence:</strong> {{ confidence*100|round(2) }}%</p>
+            <img src="{{ image_path }}" alt="Image" style="max-width:300px;">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
