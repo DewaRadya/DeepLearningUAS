@@ -6,3 +6,6 @@ Proyek ini bertujuan untuk mengembangkan model deep learning untuk klasifikasi a
 
 ## Dataset
 https://drive.google.com/drive/folders/1moU3jYLYgsNhZ3RD7SEtY6Do2yUICUav?usp=drive_link
+
+## Model 
+https://drive.google.com/drive/folders/1jnv_l2rGAsyZ-AIBLgJ_fVDpQuyOZiCx?usp=sharing
